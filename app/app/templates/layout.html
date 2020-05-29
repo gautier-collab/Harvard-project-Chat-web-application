@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <!-- following line avoids favicon GET request -->
+        <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+
+        <!-- following lines avoid some bugs -->
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <meta content="utf-8" http-equiv="encoding">
+
+        <!-- Bootstrap link -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <!-- Handlebars link -->
+        <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+
+        <!-- jQuery link -->
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+        <!-- socket.io link -->
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+
+        <!-- JavaScript file location -->
+        <script src="{{ url_for('static', filename='index.js') }}"></script>
+
+        <!-- Providing some URLs that can be further used in index.js -->
+        <div id="URLs" data-indexurl="{{url_for('index')}}" data-usernameurl="{{url_for('username')}}" data-channelurl="{{ url_for('channelPage', channel = '') }}" data-staticurl="{{ url_for('static', filename='') }}"></div>
+
+        <title>
+        {% block title %}{% endblock %}
+        </title>
+
+        {% block head %}{% endblock %}
+
+    </head>
+
+    <body>
+
+        </br>
+        </br>
+        <div class="row">
+            <div class="col-lg-3 col-sm-2">
+            </div>
+            <div class="col-lg-6 col-sm-8">
+                <div style = "text-align:center">
+                <h3></h3>
+                <h1>{% block heading %}{% endblock %}</h1>
+                </div>
+                </br>
+                </br>
+                </br>
+            </div>
+            <div class="col-lg-3 col-sm-2">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-2 col-sm-1">
+            </div>
+            <div class="col-lg-6 col-sm-6">
+                {% block body %}{% endblock %}
+            </div>
+            <div class="col-lg-1 col-sm-1">
+            </div>
+            <div class="col-lg-2 col-sm-3">
+                {% block channels %}{% endblock %}
+            </div>
+            <div class="col-lg-1 col-sm-1">
+            </div>
+        </div>
+
+    </body>
+
+</html>

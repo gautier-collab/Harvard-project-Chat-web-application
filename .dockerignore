@@ -1,0 +1,11 @@
+.git
+.gitignore
+.dockerignore
+**/Dockerfile
+docker-compose.yml
+**/__pycache__
+**/*.pyc
+**/flask_session
+**/*.jpg
+**/*.png
+**/*.gif

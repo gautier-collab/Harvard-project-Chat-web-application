@@ -1,0 +1,23 @@
+{% extends "signedin.html" %}
+
+{% block title %}Flack{% endblock %}
+
+{% block content %}
+
+    {% if error == "yes" %}
+        <h5>
+            <b style="color:red">
+                ERROR: This URL doesn't exist, sorry.
+            </b>
+        </h5>
+        <br>
+        <br>
+    {% endif %}
+
+    <h5>
+        <b> 
+            Use the right pannel to join a channel or create one.
+        </b>
+    </h5>
+
+{% endblock %}

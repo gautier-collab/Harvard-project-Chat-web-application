@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}Flack{% endblock %}
+
+{% block heading %}Welcome to Flack !{% endblock %}
+
+{% block body %}
+
+    Choose a username
+    <form>
+        <input id="username" type="text" maxlength="30">
+        <a href="{{url_for("index")}}">
+            <button id="signIn">
+                Confirm
+            </button>
+        </a>
+    </form>
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "signedin.html" %}
+
+{% block content %}
+        <div id="messages">
+        </div>
+        <div>
+            <input id="newMsg" type="text" maxlength="300">
+            &nbsp; &nbsp;
+            <label for="inpFile" style="background-color: rgb(233, 233, 233); padding-right: 10px; padding-left: 10px; padding-top: 3px; padding-bottom: 3px">
+                Add an image
+            </label>
+            <span id="inpSpan">
+                <input id="inpFile" type="file" name="file" value="upload" accept="image/png,image/gif,image/jpeg" style="display: none">
+            </span>
+            <small id="filename"></small>
+            &nbsp;
+            <span id="discardSpan"></span>
+        </div>
+        <button id="send" style="margin-top: 4px;">
+            Send
+        </button>
+        <!-- p element is used to add the channel name received from the server when the channel URL is directly typed in the search bar -->
+        <p id="temp">{{channel}}</p>
+{% endblock %}
