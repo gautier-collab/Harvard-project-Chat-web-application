@@ -1,6 +1,6 @@
 # -------- Harvard-project-Chat-web-application --------
 
-Screencast presenting my web application (before it was containerized): https://www.youtube.com/watch?v=hrpNEo6BrBU
+Screencast presenting my web application (before it was containerized): https://youtu.be/ArwJCyf6YcE
 
 This is a web application named Flack, similar in spirit to Slack, built as my Project 2 of the Harvard course CS50's Web Programming with Python and JavaScript (2018 version). It lets users pick a display name, create chatrooms, post messages and pictures and receive content from other users in real-time. When a user leaves the website and comes back, he is redirected to the last channel he visited.
 
